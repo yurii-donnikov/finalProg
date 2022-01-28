@@ -11,7 +11,7 @@ const UserInfoPage = lazy(
   () => import("../../pages/UserInfoPage/UserInfoPage")
 );
 
-function Main() {
+function MainContent() {
   return (
     <Container>
       <main>
@@ -39,4 +39,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default MainContent;
