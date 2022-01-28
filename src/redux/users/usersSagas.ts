@@ -1,12 +1,8 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
-import fetchUsers from '../../services/api/apiUsers';
 import { IUser } from './../../interfaces/usersInterfaces';
-import {
-  fetchUsersError,
-  fetchUsersSuccess,
-  fetchMoreUsersSuccess,
-} from './usersActions';
+import { fetchUserError, fetchUserSuccess, fetchLotUsersSuccess,} from './usersActions';
 import * as type from './usersTypes';
+import fetchUsers from '../../services/api/apiUsers';
 
 interface IParams {
   type: string;
@@ -19,17 +15,16 @@ interface IParams {
 function* fetchUsersWorker({ payload }: IParams): Generator {
   try {
     const users = (yield call(fetchUsers, payload)) as IUser[];
-
     if (payload) {
-      yield put(fetchMoreUsersSuccess(users));
+      yield put(fetchLotUsersSuccess(users));
     } else {
-      yield put(fetchUsersSuccess(users));
+      yield put(fetchUserSuccess(users));
     }
   } catch (error) {
-    yield put(fetchUsersError(error));
+    yield put(fetchUserError(error));
   }
 }
 
 export function* usersWatcher() {
-  yield takeLatest(type.FETCH_USERS_REQUEST, fetchUsersWorker);
+  yield takeLatest(type.FETCH_USER_REQUEST, fetchUsersWorker);
 }

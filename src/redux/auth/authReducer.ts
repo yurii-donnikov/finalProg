@@ -9,7 +9,7 @@ const initialState: IInitAuthState = {
   isAuthenticated: Boolean(localStorage.getItem('auth')),
 };
 
-const authReducer = <T>(state = initialState, action: IAction<T>) => {
+const authorizationReducer = <T>(state = initialState, action: IAction<T>) => {
   switch (action.type) {
     case type.LOGIN_REQUEST:
     case type.LOGOUT_REQUEST:
@@ -34,4 +34,4 @@ const authReducer = <T>(state = initialState, action: IAction<T>) => {
   }
 };
 
-export default authReducer;
+export default authorizationReducer;

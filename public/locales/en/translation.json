@@ -2,7 +2,7 @@
   "users": "Users",
   "user_information": "User info",
   "log_off": "Log out",
-  "log_in": "Log in",
+  "button_login": "Log in",
   "loading": "Loading",
   "message_For_User": "Select a user to see their information"
 }

@@ -1,4 +1,4 @@
-export const FETCH_USERS_REQUEST = 'users/fetchUsersRequest';
-export const FETCH_USERS_SUCCESS = 'users/fetchUsersSuccess';
-export const FETCH_USERS_ERROR = 'users/fetchUsersError';
-export const FETCH_MORE_USERS_SUCCESS = 'users/fetchMoreUsersSuccess';
+export const FETCH_USER_REQUEST = 'users/fetchRequest';
+export const FETCH_USER_SUCCESS = 'users/fetchSuccess';
+export const FETCH_USER_ERROR = 'users/fetchError';
+export const FETCH_LOT_USERS_SUCCESS = 'users/fetchLotUsersSuccess';

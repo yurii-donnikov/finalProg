@@ -1,3 +1,20 @@
+export interface IUsersState {
+  users: {
+    users: IUser[];
+    error: null | Error;
+  };
+}
+
+export interface IInitStateReducer {
+  users: IUser[];
+  error: null | Error;
+}
+
+export interface IAction<T> {
+  type: string;
+  payload: T & T[];
+}
+
 export interface IUser {
   gender: string;
   name: {
@@ -49,19 +66,4 @@ export interface IUser {
   };
 }
 
-export interface IUsersState {
-  users: {
-    users: IUser[];
-    error: null | Error;
-  };
-}
 
-export interface IInitStateReducer {
-  users: IUser[];
-  error: null | Error;
-}
-
-export interface IAction<T> {
-  type: string;
-  payload: T & T[];
-}

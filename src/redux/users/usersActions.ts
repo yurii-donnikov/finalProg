@@ -5,22 +5,22 @@ interface IAction<T> {
   payload?: T;
 }
 
-export const fetchUsersRequest = <T>(data?: T): IAction<T> => ({
-  type: type.FETCH_USERS_REQUEST,
+export const fetchUserRequest = <T>(data?: T): IAction<T> => ({
+  type: type.FETCH_USER_REQUEST,
   payload: data,
 });
 
-export const fetchUsersSuccess = <T>(data: T): IAction<T> => ({
-  type: type.FETCH_USERS_SUCCESS,
+export const fetchUserSuccess = <T>(data: T): IAction<T> => ({
+  type: type.FETCH_USER_SUCCESS,
   payload: data,
 });
 
-export const fetchUsersError = <T>(data: T): IAction<T> => ({
-  type: type.FETCH_USERS_ERROR,
+export const fetchUserError = <T>(data: T): IAction<T> => ({
+  type: type.FETCH_USER_ERROR,
   payload: data,
 });
 
-export const fetchMoreUsersSuccess = <T>(data: T): IAction<T> => ({
-  type: type.FETCH_MORE_USERS_SUCCESS,
+export const fetchLotUsersSuccess = <T>(data: T): IAction<T> => ({
+  type: type.FETCH_LOT_USERS_SUCCESS,
   payload: data,
 });
