@@ -1,6 +1,6 @@
 import axios from 'axios';
 import apiConfig from './apiConfig';
-import { IUser } from './../../interfaces/usersInterfaces';
+import { IUser } from '../interfaces/usersInterfaces';
 
 interface IParams {
   page: number;
@@ -13,10 +13,8 @@ axios.defaults.params = { ...apiConfig.params };
 
 const fetchUsers = async (options?: IParams): Promise<IUser[]> => {
   options = options || apiConfig.defaultFetch;
-
   axios.defaults.params.page = options.page;
   axios.defaults.params.results = options.results;
-
   const {
     data: { results },
   } = await axios.get('/');

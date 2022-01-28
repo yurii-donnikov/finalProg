@@ -2,7 +2,7 @@ import { put, call, takeLatest } from 'redux-saga/effects';
 import { IUser } from './../../interfaces/usersInterfaces';
 import { fetchUserError, fetchUserSuccess, fetchLotUsersSuccess,} from './usersActions';
 import * as type from './usersTypes';
-import fetchUsers from '../../services/api/apiUsers';
+import fetchUsers from '../../api/apiUsers';
 
 interface IParams {
   type: string;
