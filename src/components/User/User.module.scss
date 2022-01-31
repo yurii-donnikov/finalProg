@@ -1,7 +1,6 @@
 .userCard {
-  width: 30%;
-  margin: 1%;
-  padding: 5px 0 0 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
 
   &:hover {
@@ -12,6 +11,10 @@
   }
 }
 .link {
+  display: block;
+  position: relative;
+  width: 30%;
+  margin: 10px 1%;
   color: black;
   text-decoration: none;
 }
@@ -22,11 +25,13 @@
 }
 
 .male {
+  box-sizing: border-box;
   border: 5px solid #00bfff;
   background-color: #effbff;
 }
 
 .female {
+  box-sizing: border-box;
   border: 5px solid #fb36a1;
   background-color: #faebfa;
 }

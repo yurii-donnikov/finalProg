@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { fetchUserRequest } from "../../redux/users/usersActions";
 import { getUsers } from "../../redux/users/usersSelectors";
-import User from "../../components/User/User";
+import UserLink from "../../components/User/UserLink";
 import styles from "../UsersPage/UsersPage.module.scss";
 
 function UsersPage() {
@@ -38,11 +38,11 @@ function UsersPage() {
     }
   };
   return (
-    <ul className={styles.list}>
+    <div className={styles.list}>
       {users.map((user) => (
-        <User key={user.login.uuid} user={user} />
+        <UserLink key={user.login.uuid} user={user} />
       ))}
-    </ul>
+    </div>
   );
 }
 

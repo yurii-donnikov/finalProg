@@ -1,5 +1,5 @@
-import { IUser } from '../../interfaces/usersInterfaces';
-import styles from './UserInfo.module.scss';
+import { IUser } from "../../interfaces/usersInterfaces";
+import styles from "./UserInfo.module.scss";
 
 function UserInfo({ user }: { user: IUser }) {
   return (
@@ -13,6 +13,7 @@ function UserInfo({ user }: { user: IUser }) {
       <p className={styles.registeredDate}>
         {user.registered.date.slice(0, 10)}
       </p>
+      <p>1234</p>
     </div>
   );
 }
