@@ -65,5 +65,9 @@ export interface IUser {
     thumbnail: string;
   };
 }
-
-
+export interface IProps {
+  users: IUser[];
+}
+export interface IParams {
+  user: IUser;
+}

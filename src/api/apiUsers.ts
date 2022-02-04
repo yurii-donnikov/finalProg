@@ -9,16 +9,18 @@ interface IParams {
 
 axios.defaults.baseURL = apiConfig.baseUrl;
 
-axios.defaults.params = { ...apiConfig.params };
+const fetchUsers = async (settings?: IParams): Promise<IUser[]> => {
+  settings = settings || apiConfig.defaultFetch;
+  const settingsRequest = {
+    params: {
+      page: settings.page,
+      results: settings.results,
+      seed: apiConfig.params.seed,
+      exc: apiConfig.params.exc,
+    },
+  };
 
-const fetchUsers = async (options?: IParams): Promise<IUser[]> => {
-  options = options || apiConfig.defaultFetch;
-  axios.defaults.params.page = options.page;
-  axios.defaults.params.results = options.results;
-  const {
-    data: { results },
-  } = await axios.get('/');
-
+  const { data: { results }, } = await axios.get('/', settingsRequest);
   return results;
 };
 

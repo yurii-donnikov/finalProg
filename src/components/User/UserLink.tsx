@@ -1,22 +1,14 @@
-import { NavLink } from "react-router-dom";
-import { Path } from "../../constants/path";
-import { IUser } from "../../interfaces/usersInterfaces";
 import styles from "./User.module.scss";
-import UserCard from "../User/User";
+import UserContainer from "../Contents/UserContainer";
+import { IProps } from "../../interfaces/usersInterfaces";
 
-interface IProps {
-  user: IUser;
-}
-
-function UserLink({ user }: IProps) {
+function UserLink({ users }: IProps) {
   return (
-    <NavLink
-      to={`${Path.USER_INFO}/${user.login.uuid}`}
-      state={user}
-      className={styles.link}
-    >
-      <UserCard user={user} />
-    </NavLink>
+    <div className={styles.wrapperCard}>
+      {users.map((user) => (
+        <UserContainer key={user.login.uuid} user={user} />
+      ))}
+    </div>
   );
 }
 
