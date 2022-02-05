@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { fetchUserRequest } from "../../redux/users/usersActions";
 import { getUsers } from "../../redux/users/usersSelectors";
-import UserLink from "../../components/User/UserLink";
+import UserLink from "./UserLink";
 
 function UsersListContent() {
   const dispatch = useDispatch();

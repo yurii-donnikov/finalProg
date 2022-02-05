@@ -1,5 +1,5 @@
-import styles from "./User.module.scss";
-import UserContainer from "../Contents/UserContainer";
+import styles from "./UserLink.module.scss";
+import UserContainer from "./UserContainer";
 import { IProps } from "../../interfaces/usersInterfaces";
 
 function UserLink({ users }: IProps) {

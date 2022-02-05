@@ -1,4 +1,4 @@
-import UsersListContent from "../../components/Contents/UsersListContent";
+import UsersListContent from "../../components/User/UsersListContent";
 
 function UsersPage() {
   return <UsersListContent />;

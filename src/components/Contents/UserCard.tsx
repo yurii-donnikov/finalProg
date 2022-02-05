@@ -1,4 +1,4 @@
-import styles from "./User.module.scss";
+import styles from "./UserCard.module.scss";
 import { useMemo } from "react";
 import { IParams } from "../../interfaces/usersInterfaces";
 

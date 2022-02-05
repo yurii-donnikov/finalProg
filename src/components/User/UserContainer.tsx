@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Path } from "../../constants/path";
-import UserCard from "../User/UserCard";
+import UserCard from "../Contents/UserCard";
 import styles from "./UserContainer.module.scss";
 import { IParams } from "../../interfaces/usersInterfaces";
 
